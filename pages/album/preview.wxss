@@ -1,0 +1,39 @@
+/* pages/album/preview.wxss */
+
+page {
+  background: #000;
+  height: 100%;
+}
+
+swiper {
+  height: 100%;
+}
+
+image {
+  width: 100%;
+}
+
+.bottom {
+  margin-bottom: 30rpx;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-l {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 70rpx;
+  background: #fff;
+  border: 15rpx solid #e6e6e6;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.bottom-l .iconfont {
+  color: #ff906a;
+  font-size: 60rpx;
+}

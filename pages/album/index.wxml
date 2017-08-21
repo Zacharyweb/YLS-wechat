@@ -1,0 +1,64 @@
+<view class="container">
+  <swiper bindchange="swiperPhoto" class="slider">
+    <swiper-item wx:for-items="{{pictures}}" wx:key="{{picture.AlbumId}}" wx:for-item="picture">
+      <view class="scroll-view-item">
+        <navigator hover-class="none" url="../album/preview?id={{picture.AlbumId}}">
+          <image mode="aspectFill" class="img" src="{{picture.src}}">
+            <text class="img-num">{{picture.Count}}</text>
+            <view class="userinfo">
+              <image class="headImg" src="{{picture.img}}"></image>
+              <text class="pictitle">{{picture.Title}}</text>
+              <text class="nickName">{{picture.nickname}}</text>
+            </view>
+          </image>
+        </navigator>
+        <scroll-view class="scroll" scroll-y="true" bindscrolltolower="loadMore">
+          <view class="fx-column commend">
+            <view class="fx-row fx-row-center com-title">喜欢
+              <view class="com-num">{{picture.Commends}}</view>
+            </view>
+            <view class="fx-row com-photos">
+              <view wx:if="{{picture.commendItems.length === 0}}"></view>
+              <scroll-view style="height: 60rpx;" wx:else scroll-x="true">
+                <image wx:for-items="{{picture.commendItems}}" wx:for-item="commend" wx:for-index="i" src="{{commend.img}}" class="com-photo {{i == 0 ? 'com-photo-first':null}}"></image>
+              </scroll-view>
+            </view>
+          </view>
+          <view class="fx-column comment">
+            <view class="fx-row fx-row-center com-title">评论
+              <view class="com-num">{{picture.Comments}}</view>
+            </view>
+            <view class="com-list">
+              <view wx:if="{{picture.commentItems.length === 0}}"></view>
+              <view wx:else>
+                <view wx:for="{{picture.commentItems}}" wx:key="{{comment.CommentId}}" wx:for-item="comment" class="fx-row com-list-item">
+                  <image src="{{comment.img}}" class="com-photo"></image>
+                  <view class="fx-1 fx-column com-comment">
+                    <view class="fx-row fx-row-space-between com-name">{{comment.nickName}}
+                      <view class="com-time">{{comment.time}}</view>
+                    </view>
+                    <view class="com-content">{{comment.Content}}</view>
+                    <view class="com-reply" wx:if="{{comment.reply}}">
+                      <view class="fx-column com-comment">
+                        <view class="fx-row com-name">管理员回复</view>
+                        <view class="com-content">{{comment.reply}}</view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="bottom">
+    <view bindtap="doCommend" class="bottom-l">
+      <view class="iconfont icon-add"></view>
+    </view>
+    <view  bindtap="doComments"  class="bottom-r">
+      <view class="iconfont icon-bianji"></view>
+    </view>
+  </view>
+</view>

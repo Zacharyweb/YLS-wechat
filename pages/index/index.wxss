@@ -1,0 +1,15 @@
+page {
+  height: 100%;
+  position: relative;
+  background: #efefef;
+}
+
+navigator {
+  height: 100%;
+}
+
+/**index.wxss**/
+
+.wrapper-scroll {
+  top: 120rpx;
+}

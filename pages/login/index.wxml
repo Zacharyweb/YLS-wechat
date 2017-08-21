@@ -1,0 +1,39 @@
+<import src="/utils/toptips/index.wxml" />
+<import src="/utils/dialog/index.wxml" />
+<form bindsubmit="submit">
+  <view class="container">
+    <view class="fx-row">
+      <image class="fx-1" src="../../images/login_bg.png"></image>
+    </view>
+    <view class="fx-column fx-row-center lg-top">
+      <image src="{{user.avatarUrl}}"></image>
+      <view class="fx-row fx-row-center nickname">
+        {{user.nickName}}
+        <view bindtap="showDialog" class="edit iconfont icon-bianji"></view>
+      </view>
+      <view class="remark c2">请修改为昵称+房号</view>
+    </view>
+    <view class="fx-column pd30">
+      <view class="fx-column pd-lr30 lg-form">
+        <view class="fx-row fx-row-center lg-form-item">
+          <view class="fx-row fx-row-middle lg-form-item-t">
+            <view class="iconfont icon-shoujihao"></view>
+          </view>
+          <input maxlength="12" class="fx-1" name="phone" bindchange="bindChange" type="number" placeholder="请输入手机号" />
+          <view id="sendcode" class="{{isSending?'c2':'c1'}} lg-code" bindtap="sendphone">{{codeText}}</view>
+        </view>
+        <view class="fx-row fx-row-center lg-form-item">
+          <view class="fx-row fx-row-middle lg-form-item-t">
+            <view class="iconfont icon-yanzhengma"></view>
+          </view>
+          <input maxlength="4" class="fx-1" name="code" type="number" placeholder="请输入短信验证码" />
+        </view>
+      </view>
+      <view class="fx-row fx-1 mg-t50">
+        <button class="btn btn-primary" formType="submit" type="default">立即使用</button>
+      </view>
+    </view>
+  </view>
+</form>
+<template is="zan-toptips" data="{{ zanTopTips }}"></template>
+<template is="comment" data="{{ Dialog }}"></template>

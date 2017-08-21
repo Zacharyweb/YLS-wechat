@@ -1,0 +1,23 @@
+.btn {
+  color: #fff;
+  border:none;
+}
+.zan-btn::after {
+  display: none;
+}
+
+/* type */
+.btn-primary {
+  color: #fff !important;
+  background-color: #76A6F0 !important;
+}
+
+.btn-warn {
+  color: #fff;
+  background-color: #f85;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #f44;
+}

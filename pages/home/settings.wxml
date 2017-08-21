@@ -1,0 +1,17 @@
+
+<!--pages/home/settings.wxml-->
+<view class="zan-panel">
+  <view class="zan-cell zan-cell--access">
+    <view class="zan-cell__bd">昵称</view>
+    <view class="zan-cell__ft">{{name}}</view>
+  </view>
+  <!--<view class="zan-cell zan-cell--access">
+    <view class="zan-cell__bd">单元</view>
+    <view class="zan-cell__ft">三单元</view>
+  </view>
+  <view class="zan-cell zan-cell--access">
+    <view class="zan-cell__bd">房号</view>
+    <view class="zan-cell__ft">1109室</view>
+  </view>-->
+</view>
+<button bindtap="exit" class="mg-30" type="warn">退出</button>

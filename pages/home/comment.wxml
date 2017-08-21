@@ -1,0 +1,13 @@
+<view wx:if="{{coments.length === 0}}" class="data-empty"> 暂无评论 </view>
+<view wx:else class="zan-panel">
+  <view wx:for="{{coments}}" wx:for-item="com" class="zan-cell zan-cell--access">
+    <view class="fx-column">
+      <view class="title">{{com.title}}</view>
+      <view class="zan-cell__bd">
+        <text  class="c2">评论：</text>{{com.content}}
+        <text style="display:block"></text>
+        <text wx:if="{{com.reply}}"  class="c2">管理员回复：</text>{{com.reply}}</view>
+      <view class="mg-t30 c2">{{com.time}}</view>
+    </view>
+  </view>
+</view>

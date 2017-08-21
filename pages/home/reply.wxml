@@ -1,0 +1,9 @@
+<view wx:if="{{coments.length === 0}}" class="data-empty"> 没有收到的回复 </view>
+<view wx:else class="zan-panel">
+  <view wx:for="{{coments}}" wx:for-item="com" class="zan-cell zan-cell--access">
+    <view class="fx-column">
+      <view class="zan-cell__bd"><text class="c2">管理员回复：</text>{{com.content}}</view>
+      <view class="mg-t30 c2">{{com.time}}</view>
+    </view>
+  </view>
+</view>

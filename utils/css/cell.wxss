@@ -1,0 +1,96 @@
+.zan-panel {
+  background: #fff;
+  margin-top: 30rpx;
+  overflow: hidden;
+}
+
+.zan-panel::before {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  border-top: 1rpx solid #d9d9d9;
+  background: #d9d9d9;
+  content: ' ';
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+}
+
+.zan-panel::after {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  border-top: 1rpx solid #d9d9d9;
+  background: #d9d9d9;
+  content: ' ';
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+}
+
+.zan-cell {
+  position: relative;
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+}
+
+.zan-cell::after {
+  position: absolute;
+  left: 15px;
+  right: 0;
+  bottom: 0;
+  width: 200%;
+  border-top: 1rpx solid #d9d9d9;
+  background: #d9d9d9;
+  content: ' ';
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+}
+
+.zan-cell__bd {
+  flex: 1;
+  line-height: 150%;
+}
+
+.zan-cell__ft {
+  position: relative;
+  text-align: right;
+  color: #666;
+}
+
+.zan-cell--last-child::after, .zan-cell:last-child::after {
+  display: none;
+}
+
+.zan-cell--access .zan-cell__ft {
+  padding-right: 13px;
+}
+
+.zan-cell--access
+.zan-cell__ft::after {
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  content: " ";
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  border-width: 2px 2px 0 0;
+  border-color: #c8c8c8;
+  border-style: solid;
+  transform: translateY(-50%) matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+}
+
+.zan-cell--switch {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}

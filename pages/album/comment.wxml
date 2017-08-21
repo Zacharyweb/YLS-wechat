@@ -1,0 +1,8 @@
+<import src="/utils/toptips/index.wxml" />
+<view class="pd30">
+  <textarea bindinput="inputChange" class="input-comt" placeholder="请输入评论内容" auto-focus="true" />
+  <view class="fx-row fx-1 mg-t30">
+    <button class="btn btn-primary" bindtap="submit" type="default">提交</button>
+  </view>
+</view>
+<template is="zan-toptips" data="{{ zanTopTips }}"></template>

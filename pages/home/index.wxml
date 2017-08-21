@@ -1,0 +1,23 @@
+
+<!--pages/home/index.wxml-->
+<view class="fx-column">
+  <view class="fx-column fx-row-center fx-row-middle top bg1">
+    <image class="avatar" src="{{photo}}"></image>
+    <view class="name">{{name}}</view>
+  </view>
+  <view class="fx-row fx-wrap bottom">
+    <navigator hover-class="none" class="item fx-column fx-row-center fx-row-middle" url="../home/comment">
+      <view class="item-1 fx-row fx-row-center fx-row-middle">
+        <view class="iconfont icon-bianji"></view>
+      </view>
+     评论/回复
+    </navigator>
+   
+    <navigator hover-class="none" class="item fx-column fx-row-center fx-row-middle" url="../home/settings">
+      <view class="item-3 fx-row fx-row-center fx-row-middle">
+        <view class="iconfont icon-shezhi"></view>
+      </view>
+      设置
+    </navigator>
+  </view>
+</view>

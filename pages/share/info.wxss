@@ -1,0 +1,9 @@
+@import '../info/index.wxss';
+
+image {
+  width: 100%;
+}
+
+.icon-xin1 {
+  color: #ff906a;
+}

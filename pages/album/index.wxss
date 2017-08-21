@@ -1,0 +1,120 @@
+/**index.wxss**/
+
+page {
+  height: 100%;
+  position: relative;
+  background: #efefef;
+}
+
+.container {
+  height: calc(100% - 190rpx);
+  padding: 0 0 0 0;
+  line-height: 150%;
+}
+
+.container .slider {
+  height: 100%;
+  width: 100%;
+}
+
+.container .scroll-view-item {
+  margin-left: 46rpx;
+  width: calc(100% - 92rpx);
+  height: calc(100% - 30rpx);
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+  background: white;
+}
+
+.container .scroll-view-item  .img {
+  background: #e6e6e6;
+  width: 100%;
+  border-radius: 20rpx 20rpx 0 0;
+  height: 400rpx;
+  box-shadow: 0 0 10rpx #ccc;
+  position: relative;
+}
+
+.container .img .img-num {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  background: #000;
+  color: #fff;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 10rpx;
+  font-size: 10pt;
+  line-height: 40rpx;
+  text-align: center;
+}
+
+.container .scroll-view-item  .userinfo {
+  position: absolute;
+  color: white;
+  bottom: 20rpx;
+  left: 20rpx;
+  right: 0;
+}
+
+.container .scroll-view-item .headImg {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  float: left;
+  color: white;
+}
+
+.container .scroll-view-item  .userinfo text {
+  text-indent: 10rpx;
+  display: block;
+}
+
+.container .scroll-view-item  .userinfo .pictitle {
+  font-size: 17pt;
+}
+
+.container .scroll-view-item  .userinfo .nickName {
+  font-size: small;
+}
+
+.bottom {
+  margin-bottom: 30rpx;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.bottom-l .iconfont, .bottom-r .iconfont {
+  font-size: 65rpx;
+}
+
+.bottom-l, .bottom-r {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 70rpx;
+  background: #fff;
+  border: 15rpx solid #e6e6e6;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.bottom-l {
+  float: left;
+  margin-left: 225rpx;
+}
+
+.bottom-l .iconfont {
+  color: #ff906a;
+}
+
+.bottom-r {
+  float: right;
+  margin-right: 225rpx;
+  color: #999;
+}
+
+.scroll {
+  height: calc(100% - 400rpx);
+}
+

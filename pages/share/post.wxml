@@ -1,0 +1,48 @@
+<!--pages/share/post.wxml-->
+<import src="/utils/toptips/index.wxml" />
+<form bindsubmit="formSubmit">
+  <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-form__title">共享标题</view>
+      <input name="title" type="text" placeholder="请填写标题" class="zan-form__input" />
+    </view>
+    <view class="zan-cell">
+      <view class="zan-form__title">共享类别</view>
+      <view class="zan-form__input">
+        <radio-group name="categoryId">
+          <label>
+            <radio value="3" checked="{{categoryId == '3'}}" />生活服务
+          </label>
+          <label>
+            <radio value="4" checked="{{categoryId == '4'}}" />物有所用
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <view class="zan-cell">
+      <view class="zan-form__title">私信我</view>
+      <switch name="isPrivate" />
+    </view>
+    <view class="zan-cell">
+      <view class="zan-form__title">联系方式</view>
+      <input name="phone" type="text" placeholder="请填写联系方式或截图上传" class="zan-form__input" />
+    </view>
+    <view class="zan-cell">
+      <view class="zan-form__title">上传图片</view>
+      <view class="zan-form__input">
+        <view class="photos fx-row fx-wrap">
+          <image wx:for="{{images}}" bindtap="removeImage" data-index="{{index}}" wx:for-item="img" src="{{img}}"></image>
+          <view wx:if="{{images.length < 3}}" bindtap="chooseImage" class="choose-img iconfont icon-add"></view>
+        </view>
+      </view>
+    </view>
+    <view class="zan-cell">
+      <textarea maxlength="200" name="description" bindinput="inputChange" class="input-comt" placeholder="请输入备注（不超过200个字）" />
+    </view>
+  </view>
+  <view class="fx-row mg-30 c2">谢绝广告！</view>
+  <view class="fx-row fx-1">
+    <button class="btn btn-primary mg-30" formType="submit" type="default">提交共享</button>
+  </view>
+</form>
+<template is="zan-toptips" data="{{ zanTopTips }}"></template>

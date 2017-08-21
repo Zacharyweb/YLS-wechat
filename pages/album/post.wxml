@@ -1,0 +1,12 @@
+<import src="/utils/toptips/index.wxml" />
+<view class="pd30">
+  <input bindinput="inputChange" class="input-single" placeholder="请输入美图标题" maxlength="10" auto-focus="true" />
+  <view class="photos fx-row fx-wrap mg-t30">
+    <image wx:for="{{images}}" bindtap="removeImage" data-index="{{index}}" wx:for-item="img" src="{{img}}"></image>
+    <view wx:if="{{images.length < 9}}" bindtap="chooseImage" class="choose-img iconfont icon-add"></view>
+  </view>
+  <view class="fx-row fx-1 mg-t30">
+    <button class="btn btn-primary" bindtap="submit" type="default">立即发布</button>
+  </view>
+</view>
+<template is="zan-toptips" data="{{ zanTopTips }}"></template>

@@ -1,0 +1,18 @@
+/* pages/album/post.wxss */
+
+.photos image {
+  height: 100rpx;
+  width: 100rpx;
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.choose-img {
+  border: 1px solid #e6e6e6;
+  width: 100rpx;
+  height: 100rpx;
+  color: #999;
+  font-size: 70rpx;
+  text-align: center;
+  line-height: 100rpx;
+}

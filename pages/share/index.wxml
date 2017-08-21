@@ -1,0 +1,29 @@
+<!--pages/share/index.wxml-->
+
+<import src="/utils/toptips/index.wxml" />
+<template is="zan-toptips" data="{{ zanTopTips }}"></template>
+<view class="fx-column pd30 top">
+  <view class="fx-row top-bar">
+    <view wx:for-items="{{menus}}" wx:key="{{menu.id}}" wx:for-item="menu" bindtap="clickmenu" id="{{menu.id}}" class="bar-item {{menu.selected}}">{{menu.text}}</view>
+    <navigator url="../search/index?id={{currentId}}">
+      <view class="iconfont icon-sousuo"></view>
+    </navigator>
+  </view>
+</view>
+<view class="wrapper-scroll pd30">
+  <view wx:for-items="{{articles}}" wx:for-item="g" wx:key="{{g.name}}">
+    <view class="c2 a-group">{{g.name}}</view>
+    <navigator wx:for-items="{{g.articles}}" wx:for-item="article" wx:key="{{article.id}}" hover-class="none" class="fx-row a-item" url="../share/info?id={{article.id}}" open-type="navigate">
+      <image mode="aspectFill" class="a-item-img" src="http://yuelinshe-1253333391.costj.myqcloud.com/{{article.img}}"></image>
+      <view class="fx-column a-item-r">
+        <view class="title">{{article.title}}
+          <text class="title-tel">{{article.author}}</text>
+        </view>
+        <view class="desc">{{article.desc}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+<navigator url="../share/post?id={{currentId}}" class="post">
+  <view class="iconfont icon-bianji"> 我要共享</view>
+</navigator>

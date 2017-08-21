@@ -1,0 +1,55 @@
+/* pages/home/index.wxss */
+
+.top {
+  color: #fff;
+  height: 450rpx;
+  padding-bottom: 50rpx;
+}
+
+.avatar {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100rpx;
+  background: #fff;
+}
+
+.name {
+  padding-top: 30rpx;
+}
+
+.room {
+  padding-top: 20rpx;
+  font-size: 11pt;
+}
+
+.bottom {
+  background: #fff;
+  height: 560rpx;
+  border-radius: 10rpx;
+  margin: -80rpx 95rpx 0 95rpx;
+  box-shadow: 0 0 10rpx #ccc;
+}
+
+.bottom .item {
+  width: 280rpx;
+  height: 280rpx;
+}
+.item-1,.item-2,.item-3{
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 60rpx;
+    margin-bottom:40rpx;
+    color:#fff;
+}
+.iconfont{
+  font-size: 26pt;
+}
+.item .item-1{
+    background: #FFBC40;
+}
+.item .item-2{
+    background: #8CDE56;
+}
+.item .item-3{
+    background: #FF575B;
+}

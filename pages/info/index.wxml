@@ -1,0 +1,71 @@
+<import src="../../utils/wxParse/wxParse.wxml" />
+<import src="/utils/dialog/index.wxml" />
+<import src="/utils/toptips/index.wxml" />
+<view class="wrapper-scroll">
+  <scroll-view scroll-y="true" bindscrolltolower="loadMore">
+    <view class="fx-column">
+      <view class="fx-column fx-row-center top">
+        <view class="title">{{single.title}}</view>
+        <view class="time">
+          <navigator wx:if="{{single.previd}}" class="prev" url="../info/index?id={{single.previd}}" open-type="redirect" hover-class="none">上一篇</navigator>
+          {{single.createtime}}
+          <navigator wx:if="{{single.nextid}}" class="next" url="../info/index?id={{single.nextid}}" open-type="redirect" hover-class="none">下一篇</navigator>
+        </view>
+      </view>
+      <view class="fx-column content">
+
+        <view class="pd30">
+          <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+        </view>
+        <view class="fx-column commend">
+          <view class="fx-row fx-row-center com-title">支持
+            <view class="com-num">（{{single.commends}}）</view>
+          </view>
+          <view class="fx-row com-photos">
+            <view wx:if="{{commends.length === 0}}" class="c2"> </view>
+            <scroll-view wx:else scroll-x="true">
+              <image wx:for="{{commends}}" wx:for-item="img" wx:for-index="i" src="{{img}}" class="com-photo {{i == 0 ? 'com-photo-first':null}}"></image>
+            </scroll-view>
+          </view>
+        </view>
+        <view class="fx-column comment">
+          <view class="fx-row fx-row-center com-title">意见
+            <view class="com-num">（{{single.comments}}）</view>
+          </view>
+          <view class="com-list">
+            <view wx:if="{{comments.length === 0}}" class="c2"> </view>
+            <view wx:else>
+              <view wx:for="{{comments}}" wx:for-item="comment" class="fx-row com-list-item">
+                <image src="{{comment.img}}" class="com-photo"></image>
+                <view class="fx-1 fx-column com-comment">
+                  <view class="fx-row fx-row-space-between com-name">{{comment.nickName}}
+                    <view class="com-time">{{comment.time}}</view>
+                  </view>
+                  <view class="com-content">{{comment.content}}</view>
+                  <view class="com-reply" wx:if="{{comment.reply}}">
+                    <view class="fx-column com-comment">
+                      <view class="fx-row com-name">管理员回复</view>
+                      <view class="com-content">{{comment.reply}}</view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view class="footer fx-row fx-row-center">
+  <view class="fx-1 {{commended?'commended':null}}" bindtap="doCommend">
+    <text class="iconfont {{commended?'icon-zan':'icon-zan-light'}}"></text>
+    支持
+  </view>
+  <navigator class="fx-1" url="../info/comment?id={{id}}">
+    <text class="iconfont icon-bianji"></text>
+    意见
+  </navigator>
+</view>
+<template is="comment" data="{{Dialog}}" />
+<template is="zan-toptips" data="{{ zanTopTips }}"></template>

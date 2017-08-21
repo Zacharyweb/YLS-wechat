@@ -1,0 +1,15 @@
+<view class="fx-row fx-row-space-between fx-row-center top pd30">
+  <input focus="true" bindinput="search" class="input-s" type="text" placeholder="请输入关键词" />
+  <navigator url="{{returnUrl}}" open-type="switchTab">取消</navigator>
+  <view class="iconfont icon-sousuo"></view>
+</view>
+<scroll-view class="list">
+  <view class="list-tip">搜索结果</view>
+  <navigator wx:for="{{articles}}" wx:key="{{article.id}}" wx:for-item="article" class="fx-row list-item" url="{{infoUrl}}?id={{article.id}}">
+    <image src="http://yuelinshe-1253333391.costj.myqcloud.com/{{article.img}}"></image>
+    <view class="fx-column item-right">
+      <text class="item-title">{{article.title}}</text>
+      <text class="item-des">{{article.desc}}</text>
+    </view>
+  </navigator>
+</scroll-view>

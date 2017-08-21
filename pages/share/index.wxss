@@ -1,0 +1,38 @@
+/* pages/share/index.wxss */
+
+.wrapper-scroll {
+  top: 120rpx;
+}
+
+.a-item .a-item-img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  background: #e6e6e6;
+}
+
+.a-item .a-item-r {
+  width: 530rpx;
+}
+
+.a-item .a-item-r .title-tel {
+  font-weight: normal;
+  font-size: 10pt;
+  color: #808080;
+  float: right;
+}
+
+.post {
+  position: fixed;
+  bottom: 30rpx;
+  right: 0;
+  z-index: 999;
+  background: rgb(118, 166, 240);
+  color: #fff;
+  padding: 15rpx;
+  border-radius: 15rpx 0 0 15rpx;
+}
+
+.post .iconfont {
+  font-size: 14pt;
+}

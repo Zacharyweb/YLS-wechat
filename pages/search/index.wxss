@@ -1,0 +1,70 @@
+.top {
+  position: relative;
+}
+
+.top .iconfont {
+  position: absolute;
+  left: 50rpx;
+  top: 45rpx;
+  color: #a9a9a9;
+  z-index: 999;
+  font-size: 13pt;
+}
+
+.input-s {
+  background: #fff;
+  border-radius: 10rpx;
+  padding: 10rpx 10rpx 10rpx 80rpx;
+  width: calc(100% - 190rpx);
+  font-size: 12pt;
+  color: #000;
+}
+
+.list {
+  padding: 20rpx;
+  width: calc(100% - 40rpx);
+}
+
+.list .list-tip {
+  color: #a9a9a9;
+  position: relative;
+  padding: 20rpx 0 30rpx 0;
+  margin-bottom: 20rpx;
+  font-size: 11pt;
+}
+
+.list .list-tip::after {
+  content: " ";
+  position: absolute;
+  width: 200%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 1px solid #d9d9d9;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+}
+
+.list .list-item {
+  padding: 20rpx 0;
+}
+
+.list .list-item image {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.list .item-right {
+  padding-left: 20rpx;
+  width: 570rpx;
+}
+
+.list .item-right .item-des {
+  margin-top: 10rpx;
+  color: #a9a9a9;
+  font-size: 11pt;
+  line-height: 150%;
+}

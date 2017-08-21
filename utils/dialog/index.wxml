@@ -1,0 +1,13 @@
+<template name="comment">
+  <view class="dialog {{ Dialog.showDialog ? 'dialog--show' : '' }}">
+    <view class="dialog__mask" bindtap="toggleDialog" />
+    <view class="dialog__container">
+      <view class="pd30">
+        <input maxlength="50" bindinput="inputChange" class="input-single" type="text" value="{{Dialog.value}}" />
+        <view class="fx-row fx-1 mg-t30">
+          <button class="btn btn-primary" bindtap="dialogSave" type="default">保存</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,10 @@
+<swiper bindchange="swiperChange">
+  <swiper-item class="fx-row fx-row-middle fx-row-center" wx:for="{{imgs}}" wx:key="{{img.id}}" wx:for-item="img">
+    <image   mode="widthFix" src="{{img.src}}"></image>
+  </swiper-item>
+</swiper>
+<view class="bottom">
+    <view bindtap="doCommend" class="bottom-l">
+      <view class="iconfont icon-xin1"></view>
+    </view>
+</view>
